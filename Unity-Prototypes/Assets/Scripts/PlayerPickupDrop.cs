@@ -18,20 +18,28 @@ public class PlayerPickupDrop : MonoBehaviour
         
     }
 
+    private ObjectGrabbable objectGrabbable; //Keep track of currently held object
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) {      //Press e key to interact
-        Debug.Log("Test 1");
+        if (objectGrabbable == null) { 
+            //Not carrying an object, try to grab
         float pickupDistance = 2f;  //Distance from which you can pickup an item
             if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickupDistance, pickupLayerMask)) {  //Going to use point of view of the First Person Camera
-                 Debug.Log("Test 2");
-                 if(raycastHit.transform.TryGetComponent(out ObjectGrabbable objectGrabbable)) { //Check if object has objectGrabbable script
+                 if(raycastHit.transform.TryGetComponent(out objectGrabbable)) { //Check if object has objectGrabbable script
                  objectGrabbable.Grab(objectGrabPointTransform);
-                 Debug.Log("Test 3", objectGrabbable);
             }
+            }
+            
 
         }
+        else {
+                //Currently carrying something, drop
+                objectGrabbable.Drop(); //Call drop method from ObjectGrabbale
+                objectGrabbable = null; //Set back to null as no longer carrying object
+            }
         }
         
         
