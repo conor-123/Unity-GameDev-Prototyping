@@ -33,8 +33,10 @@ public class PlayerPickupDrop : MonoBehaviour
             }
             }
             
+            
 
         }
+        
         else {
                 //Currently carrying something, drop
                 objectGrabbable.Drop(); //Call drop method from ObjectGrabbale
@@ -42,6 +44,12 @@ public class PlayerPickupDrop : MonoBehaviour
             }
         }
         
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+            //Throw object when left mouse button is pressed
+            //Change velocity and leave go o item
+            objectGrabbable.Drop();
+            objectGrabbable.Throw();          
+        }
         
     }
 }

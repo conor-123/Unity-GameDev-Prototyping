@@ -18,6 +18,15 @@ public class ObjectGrabbable : MonoBehaviour
 
     }
 
+    // Throw object
+    
+    public void Throw(){
+       //this.objectGrabPointTransform = objectGrabPointTransform;
+        Debug.Log("Left Click Test");
+        objectRigidbody.velocity = transform.forward * 10 ;
+
+    }
+
     public void Drop() {
         this.objectGrabPointTransform = null;   
         objectRigidbody.useGravity = true;  //Set gravity again to allow object to fall
