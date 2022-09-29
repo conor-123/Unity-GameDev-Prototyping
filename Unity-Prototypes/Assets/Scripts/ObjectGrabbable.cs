@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObjectGrabbable : MonoBehaviour
 {
 
+    [SerializeField] private Transform playerCameraTransform;
+
     private Rigidbody objectRigidbody;
     private Transform objectGrabPointTransform;
 
@@ -13,6 +15,8 @@ public class ObjectGrabbable : MonoBehaviour
     }
     
     public void Grab(Transform objectGrabPointTransform) {
+        objectRigidbody.angularVelocity = new Vector3(0,0); //Set pre existing angular velocity to 0 to stop object from rotating
+        objectRigidbody.velocity = new Vector3(0,0); //Set pre existing velocity to 0 to stop item pulling up and down towards the ground
         this.objectGrabPointTransform = objectGrabPointTransform;
         objectRigidbody.useGravity = false;     //set gravity of object to false , this will stop it from constantly trying to fall up and down
 
@@ -21,9 +25,9 @@ public class ObjectGrabbable : MonoBehaviour
     // Throw object
     
     public void Throw(){
-       //this.objectGrabPointTransform = objectGrabPointTransform;
+        //For individual throwable items, make sure to attach "Main Camera" to  "Player Camera Transform" in the object grabbable script area in Unity
         Debug.Log("Left Click Test");
-        objectRigidbody.velocity = transform.forward * 10 ;
+        objectRigidbody.AddForce(playerCameraTransform.transform.forward * 1000); // Add force and throw item in the direction that the camera is facing
 
     }
 
