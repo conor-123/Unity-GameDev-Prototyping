@@ -11,6 +11,7 @@ public class PlayerPickupDrop : MonoBehaviour
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private Transform objectGrabPointTransform;
     [SerializeField] private LayerMask pickupLayerMask;
+    bool isThrowing;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,8 @@ public class PlayerPickupDrop : MonoBehaviour
             if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickupDistance, pickupLayerMask)) {  //Going to use point of view of the First Person Camera
                  if(raycastHit.transform.TryGetComponent(out objectGrabbable)) { //Check if object has objectGrabbable script
                  objectGrabbable.Grab(objectGrabPointTransform);
+                 isThrowing = true; //Set isThrowing to True so the player has ability to throw
+
             }
             }
             
@@ -44,11 +47,13 @@ public class PlayerPickupDrop : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isThrowing == true) {
             //Throw object when left mouse button is pressed
             //Change velocity and leave go o item
             objectGrabbable.Drop();
-            objectGrabbable.Throw();          
+            objectGrabbable.Throw(); 
+            isThrowing = false; //Set isThrowing to false , this means you wont be able to keep clicking the item and propelling it after throwing it once
+            return;         
         }
         
     }
