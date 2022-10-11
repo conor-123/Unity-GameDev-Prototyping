@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25cfce629374b304fadea9aaed5e4819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCameraTransform: {fileID: 0}
 --- !u!64 &4729065021270817612
 MeshCollider:
   m_ObjectHideFlags: 0
