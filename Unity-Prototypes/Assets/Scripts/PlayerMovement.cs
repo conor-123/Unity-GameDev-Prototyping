@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
 
-    public float speed = 20f;
+    public float speed = 10f;
     public float gravity = -100f;
 
     public Transform groundCheck;
@@ -68,10 +68,10 @@ public class PlayerMovement : MonoBehaviour
     //Sprinting
          if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
-            speed = 40f;
+            speed = 20f;
         }
         else{
-            speed = 20f;
+            speed = 10f;
         }
 
 
