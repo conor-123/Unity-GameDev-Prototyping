@@ -37,10 +37,10 @@ public class ObjectGrabbable : MonoBehaviour
     }
 
 
-    private void FixedUpdate() {
+    private void Update() {
 
         if(objectGrabPointTransform != null) {
-            float lerpSpeed = 10f;
+            float lerpSpeed = 40f;
             Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTransform.position, Time.deltaTime * lerpSpeed);    //Will create a smooth motion when moving currently grabbed object
             objectRigidbody.MovePosition(newPosition);
 
