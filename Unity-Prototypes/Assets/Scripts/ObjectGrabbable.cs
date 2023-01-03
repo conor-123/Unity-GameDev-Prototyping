@@ -15,10 +15,11 @@ public class ObjectGrabbable : MonoBehaviour
     }
     
     public void Grab(Transform objectGrabPointTransform) {
-        objectRigidbody.angularVelocity = new Vector3(0,0); //Set pre existing angular velocity to 0 to stop object from rotating
-        objectRigidbody.velocity = new Vector3(0,0); //Set pre existing velocity to 0 to stop item pulling up and down towards the ground
         this.objectGrabPointTransform = objectGrabPointTransform;
         objectRigidbody.useGravity = false;     //set gravity of object to false , this will stop it from constantly trying to fall up and down
+        objectRigidbody.angularVelocity = new Vector3(0,0); //Set pre existing angular velocity to 0 to stop object from rotating
+        objectRigidbody.velocity = new Vector3(0,0); //Set pre existing velocity to 0 to stop item pulling up and down towards the ground
+        
 
     }
 
