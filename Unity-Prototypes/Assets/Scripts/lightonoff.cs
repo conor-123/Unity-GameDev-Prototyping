@@ -11,7 +11,7 @@ public class lightonoff : MonoBehaviour
 
     public GameObject lightorobj;               //Light object to activate
 
-    //When scene starst - check if player is in the box coliider
+    //When scene starts - check if player is in the box coliider
 
     private void Start()
     {
@@ -40,6 +40,8 @@ public class lightonoff : MonoBehaviour
             txtToDisplay.SetActive(true);
             PlayerInZone = true;
         }
+
+
      }
     
 
