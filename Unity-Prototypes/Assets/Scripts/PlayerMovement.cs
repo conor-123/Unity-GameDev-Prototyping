@@ -42,6 +42,30 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime); //deltaTime is added so it will not be frame rate dependant 
 
 
+
+        //Sprinting
+         if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
+        {
+            speed = 30f;
+        }
+        else{
+            speed = 20f;
+        }
+        
+
+
+
+//TODO Make momentum smoother
+//UNFINISHED BELOW
+
+         if(Input.GetKey(KeyCode.LeftShift) && Input.GetButtonDown("Jump") && isGrounded) 
+        {
+            Debug.Log("Jump while sprinting");
+            speed = 1000f;
+
+        }
+        
+
         if(Input.GetButtonDown("Jump") && isGrounded) //Checks if SPACE is pressed and if the player is touching the ground  - Jump automatically maps to the SPACE key 
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -20f * gravity);
@@ -66,14 +90,6 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    //Sprinting
-         if(Input.GetKey(KeyCode.LeftShift) && isGrounded)
-        {
-            speed = 30f;
-        }
-        else{
-            speed = 20f;
-        }
 
 
 
