@@ -74,6 +74,9 @@ public class boxTrigger : MonoBehaviour
             PlayerInZone = false;
             score = score - 1;
             txtToDisplay.GetComponent<UnityEngine.UI.Text>().text = "Score " + score.ToString();
+            if (score == 0) {
+                 txtToDisplay.SetActive(false);     //Dont show score pop-up when score = 0
+            }
 
         }
     }

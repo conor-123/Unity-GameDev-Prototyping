@@ -27,7 +27,7 @@ public class PlayerPickupDrop : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E)) {      //Press e key to interact
         if (objectGrabbable == null) { 
             //Not carrying an object, try to grab
-        float pickupDistance = 5f;  //Distance from which you can pickup an item
+        float pickupDistance = 8f;  //Distance from which you can pickup an item
             if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickupDistance, pickupLayerMask)) {  //Going to use point of view of the First Person Camera
                  if(raycastHit.transform.TryGetComponent(out objectGrabbable)) { //Check if object has objectGrabbable script
                  objectGrabbable.Grab(objectGrabPointTransform);
