@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && isGrounded) //Checks if SPACE is pressed and if the player is touching the ground  - Jump automatically maps to the SPACE key 
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity.y = Mathf.Sqrt(jumpHeight * -20f * gravity);
             doubleJump = true; //Set to true to reset double jump ability
         }
         
@@ -53,13 +53,14 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetButtonDown("Jump") && isGrounded == false && doubleJump == true){ //Checks if space is being pressed, while not touching ground and that doubleJump is true
              //Debug.Log("Mid air jump");        //Test
              //Debug.Log(doubleJump);            //Log to see if bool is true or false
-             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+             velocity.y = Mathf.Sqrt(jumpHeight * -25f * gravity);
              doubleJump = false; //Set doubleJump to false (This means you can't press space infinitely and fly)
+             velocity.y += gravity * Time.deltaTime * 200f ;
 
         }
 
 
-        velocity.y += gravity * Time.deltaTime * 2 ; 
+        velocity.y += gravity * Time.deltaTime * 5f ; //Gravity force
 
         controller.Move(velocity * Time.deltaTime);
 
