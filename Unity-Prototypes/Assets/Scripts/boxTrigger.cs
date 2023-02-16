@@ -13,6 +13,8 @@ public class boxTrigger : MonoBehaviour
 
     int score; //Count number of items added to box
 
+    [SerializeField] private Animator myAnimationController;
+
 
 
     //When scene starts - check if player is in the box coliider
@@ -62,7 +64,8 @@ public class boxTrigger : MonoBehaviour
         Debug.Log("Target Hit");
 
         //Show brdige animation so player can proceed
-        gameObject.GetComponent<Animation>().Play("bridge");
+        myAnimationController.Play("bridge");
+        Debug.Log("Play Animation");
 
     }
 
