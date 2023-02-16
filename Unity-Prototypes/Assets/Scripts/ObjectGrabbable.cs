@@ -30,6 +30,9 @@ public class ObjectGrabbable : MonoBehaviour
         Debug.Log("Left Click Test");
         objectRigidbody.AddForce(playerCameraTransform.transform.forward * 1000); // Add force and throw item in the direction that the camera is facing
 
+        //Play throwing sound
+        gameObject.GetComponent<AudioSource>().Play();
+
     }
 
     public void Drop() {

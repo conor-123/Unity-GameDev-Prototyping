@@ -65,6 +65,7 @@ public class boxTrigger : MonoBehaviour
 
         //Show brdige animation so player can proceed
         myAnimationController.Play("bridge");
+        gameObject.GetComponent<AudioSource>().Play();
         Debug.Log("Play Animation");
 
     }
