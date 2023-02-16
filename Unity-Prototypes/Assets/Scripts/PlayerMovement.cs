@@ -55,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-//TODO Make momentum smoother
-//UNFINISHED BELOW
+    //TODO Make momentum smoother
+    //UNFINISHED BELOW
 
          if(Input.GetKey(KeyCode.LeftShift) && Input.GetButtonDown("Jump") && isGrounded) 
         {

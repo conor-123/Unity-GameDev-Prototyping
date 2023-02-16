@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mushroom
+  - MushroomCounter
+  - Target
   layers:
   - Default
   - TransparentFX

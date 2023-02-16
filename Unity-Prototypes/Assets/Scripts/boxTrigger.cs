@@ -13,16 +13,7 @@ public class boxTrigger : MonoBehaviour
 
     int score; //Count number of items added to box
 
-    
 
-    
-
-
-
-
-
-
-     
 
     //When scene starts - check if player is in the box coliider
 
@@ -52,31 +43,45 @@ public class boxTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mushroom")     //if mushroom is placed in box
+
+        //if Mushroom is placed in MushroomCounter box collider
+        if (other.gameObject.tag == "Mushroom" && gameObject.tag == "MushroomCounter")     
         {
             txtToDisplay.SetActive(true);
             score = score + 1;
             PlayerInZone = true;
-            Debug.Log(txtToDisplay.GetComponent<UnityEngine.UI.Text>().text + " " + score); //Get the "Text" of the GameObject (This is getting the text of the UI element)
+            // Debug.Log(txtToDisplay.GetComponent<UnityEngine.UI.Text>().text + " " + score); //Get the "Text" of the GameObject (This is getting the text of the UI element)
             txtToDisplay.GetComponent<UnityEngine.UI.Text>().text = "Score " + score.ToString();
-            
+            Debug.Log("Mushroom added to MushroomCounter Box Collider");
         }
 
 
+    //When object hits Target
+    if (other.gameObject.tag == "Mushroom" && gameObject.tag == "Target")     {
+
+        Debug.Log("Target Hit");
+
+        //Show brdige animation so player can proceed
+        gameObject.GetComponent<Animation>().Play("bridge");
+
+    }
+
      }
     
-
-    private void OnTriggerExit(Collider other)     //if player exit zone
+    //if Mushroom is removed from MushroomCounter box collider
+    private void OnTriggerExit(Collider other)    
     {
-        if (other.gameObject.tag == "Mushroom")
+        if (other.gameObject.tag == "Mushroom" && gameObject.tag == "MushroomCounter")
         {
             txtToDisplay.SetActive(true);
             PlayerInZone = false;
             score = score - 1;
             txtToDisplay.GetComponent<UnityEngine.UI.Text>().text = "Score " + score.ToString();
             if (score == 0) {
-                 txtToDisplay.SetActive(false);     //Dont show score pop-up when score = 0
+                 txtToDisplay.SetActive(false);     //TODO Dont show score pop-up when score = 0
             }
+
+            Debug.Log("Mushroom removed from MushroomCounter Box Collider");
 
         }
     }
