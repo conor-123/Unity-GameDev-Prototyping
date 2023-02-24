@@ -287,7 +287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24252075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -129.54, y: -88.39, z: 24.11}
+  m_LocalPosition: {x: -277.63, y: -88.39, z: -49.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2100044061}
@@ -13021,7 +13021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852128119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.83, y: -80.27, z: -14.26}
+  m_LocalPosition: {x: 24.83, y: -80.27, z: -14.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 514738764}
@@ -55986,6 +55986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtToDisplay: {fileID: 818877041}
   myAnimationController: {fileID: 0}
+  respawnPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!111 &2037706352
 Animation:
   m_ObjectHideFlags: 0
@@ -56381,9 +56383,10 @@ GameObject:
   - component: {fileID: 2062036717}
   - component: {fileID: 2062036716}
   - component: {fileID: 2062036715}
+  - component: {fileID: 2062036722}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56722,6 +56725,22 @@ Transform:
   m_Father: {fileID: 1161667139}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 1.049, y: -58.49, z: 1.542}
+--- !u!114 &2062036722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062036714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b259bbc437de81540b03c55259e9f373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtToDisplay: {fileID: 1075588144}
+  myAnimationController: {fileID: 0}
+  respawnPoint: {fileID: 852128120}
+  player: {fileID: 24252077}
 --- !u!1001 &2069916409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57422,8 +57441,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b259bbc437de81540b03c55259e9f373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtToDisplay: {fileID: 0}
+  txtToDisplay: {fileID: 1075588144}
   myAnimationController: {fileID: 553004820}
+  respawnPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &2120792746
 BoxCollider:
   m_ObjectHideFlags: 0
