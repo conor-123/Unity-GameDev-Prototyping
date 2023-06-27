@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
-        Debug.Log("TEST");
+        
     }
 
     private void Update()
@@ -89,14 +89,14 @@ public class PlayerMovement : MonoBehaviour
         // on ground
         if(grounded) {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-            Debug.Log("Player is ground");
+            
         }
             
 
         // in air
         else if(!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
-            Debug.Log("TEST 2");
+          
     }
 
     private void SpeedControl()
