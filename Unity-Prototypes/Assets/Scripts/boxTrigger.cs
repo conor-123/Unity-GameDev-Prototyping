@@ -86,7 +86,7 @@ public class boxTrigger : MonoBehaviour
         Debug.Log("Target Hit");
 
         //Show brdige animation so player can proceed
-        myAnimationController.Play("bridge");
+        myAnimationController.Play("Bridge");
         gameObject.GetComponent<AudioSource>().Play();
         Debug.Log("Play Animation");
 
