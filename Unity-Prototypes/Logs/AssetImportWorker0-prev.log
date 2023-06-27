@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.15f1 (e767a7370072) revision 15165351'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19044.3086; Version 2009; 64bit' Language: 'en' Physical Memory: 16332 MB
+OS: 'Windows 10 Pro; OS build 19044.2728; Version 2009; 64bit' Language: 'en' Physical Memory: 16332 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ D:/GameDev/Projects/Unity-GameDev-Prototyping/Unity-Prototypes
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62743
+60781
 Successfully changed project path to: D:/GameDev/Projects/Unity-GameDev-Prototyping/Unity-Prototypes
 D:/GameDev/Projects/Unity-GameDev-Prototyping/Unity-Prototypes
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 85.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 80.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.15f1 (e767a7370072)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2021.1.15f1/Editor/Data/Resources/UnitySubsystems
@@ -35,74 +35,76 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2021.1.15f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2021.1.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity 2021.1.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2021.1.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001984 seconds.
+Registered in 0.001876 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 88.18 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.13 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.148 seconds
+- Completed reload, in  1.109 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1148ms)
-		BeginReloadAssembly (46ms)
+	ReloadAssembly (1109ms)
+		BeginReloadAssembly (45ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (419ms)
-			LoadAssemblies (44ms)
+		EndReloadAssembly (403ms)
+			LoadAssemblies (42ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (145ms)
+			SetupTypeCache (137ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (208ms)
+			SetupLoadedEditorAssemblies (201ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (88ms)
+				RefreshPlugins (85ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (86ms)
-				ProcessInitializeOnLoadMethodAttributes (26ms)
+				ProcessInitializeOnLoadAttributes (82ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005409 seconds.
+Registered in 0.005435 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GameDev\Projects\Unity-GameDev-Prototyping\Unity-Prototypes\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GameDev\Projects\Unity-GameDev-Prototyping\Unity-Prototypes\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.030 seconds
+- Completed reload, in  0.969 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1030ms)
-		BeginReloadAssembly (133ms)
+	ReloadAssembly (969ms)
+		BeginReloadAssembly (128ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (841ms)
-			LoadAssemblies (82ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (787ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (307ms)
+			SetupTypeCache (286ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (316ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (294ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (70ms)
-				ProcessInitializeOnLoadAttributes (229ms)
-				ProcessInitializeOnLoadMethodAttributes (5ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (210ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -117,7 +119,7 @@ System memory in use before: 132.5 MB.
 System memory in use after: 132.7 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 4032.
-Total: 2.884500 ms (FindLiveObjects: 0.374800 ms CreateObjectMapping: 0.094100 ms MarkObjects: 2.298600 ms  DeleteObjects: 0.115700 ms)
+Total: 2.766400 ms (FindLiveObjects: 0.321000 ms CreateObjectMapping: 0.087400 ms MarkObjects: 2.252800 ms  DeleteObjects: 0.103800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -133,11 +135,11 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
   path: Assets/Scenes/SampleScene.unity
   artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699d82a4df76da1d61daf76d22c1d2f7') in 0.019965 seconds 
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c569c5284bdaa22d64e7d15cbbfe47a9') in 0.016854 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.506510 seconds.
-  path: Assets/Scenes/Throwing Prototype.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Throwing Prototype.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9027d66c59388e817a2afb033cec4c6d') in 0.009707 seconds 
+  Time since last request: 11.314184 seconds.
+  path: Assets/Scenes/InsideHouse.unity
+  artifactKey: Guid(3cc40e96f3b6c3a4692891440a944ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/InsideHouse.unity using Guid(3cc40e96f3b6c3a4692891440a944ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfe671d2a1623746a6332eb4baf0e6b6') in 0.006870 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
