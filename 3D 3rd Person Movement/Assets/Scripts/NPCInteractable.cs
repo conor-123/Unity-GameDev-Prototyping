@@ -9,6 +9,8 @@ public class NPCInteractable : MonoBehaviour, IInteractable {
     private Animator animator;
   //  private NPCHeadLookAt npcHeadLookAt;
 
+   PlayerInteractUI playerUI;
+
     private void Awake() {
         animator = GetComponent<Animator>();
      //   npcHeadLookAt = GetComponent<NPCHeadLookAt>();
@@ -16,11 +18,17 @@ public class NPCInteractable : MonoBehaviour, IInteractable {
 
     public void Interact(Transform interactorTransform) {
      // ChatBubble3D.Create(transform.transform, new Vector3(-.3f, 1.7f, 0f), ChatBubble3D.IconType.Happy, "Hello there!");
-       Debug.Log("Test");
+       Debug.Log("Test111");
+
+      //TO DO Display Text from NPC and also remove E button UI after pressing it
+
+
+
+       
 
         //animator.SetTrigger("Talk");
 
-        float playerHeight = 1.7f;
+        //float playerHeight = 1.7f;
      //   npcHeadLookAt.LookAtPosition(interactorTransform.position + Vector3.up * playerHeight);
     }
 
