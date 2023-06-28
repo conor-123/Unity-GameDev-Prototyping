@@ -7,10 +7,21 @@ public class PlayerInteract : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.E)) {
+
+
+            //All interactions can be called from here - NPC talking , button etc  - Calls 
+
+
             IInteractable interactable = GetInteractableObject();
             if (interactable != null) {
                 interactable.Interact(transform);
             }
+
+
+          
+
+
+            
         }
     }
 
