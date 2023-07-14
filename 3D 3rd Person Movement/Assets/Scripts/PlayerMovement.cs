@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
+   // private Animator animator; //Animator component 
+
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
@@ -37,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+
+
+      //  animator = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -57,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+
     }
 
     private void FixedUpdate()
@@ -85,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+       // animator.SetBool("isMoving", true); //Set the isMoving boolean to true
 
         // on ground
         if(grounded) {
