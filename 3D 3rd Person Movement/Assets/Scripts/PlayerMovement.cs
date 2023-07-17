@@ -53,10 +53,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         
-        var xyzSpeed = rb.velocity.magnitude;
-        var Speed = Mathf.Abs(xyzSpeed); //Make number always positve
-        animator.SetFloat("Speed", Speed);
-        Debug.Log(animator.GetFloat("Speed") + rb.velocity.magnitude);
 
 
         
@@ -78,6 +74,26 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+
+
+        var xyzSpeed = rb.velocity.magnitude;
+        var speed = Mathf.Abs(xyzSpeed);
+
+
+       
+        if (speed < 0.1) {
+            animator.SetBool("isMoving", false);
+            Debug.Log("test1");
+        }
+
+
+        else 
+        {
+            animator.SetBool("isMoving", true);
+
+        }
+        
+        
         
 
 
@@ -103,12 +119,15 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
 
+        var speed = Mathf.Abs(moveSpeed);
+
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         // on ground
         if(grounded) {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            animator.SetBool("Jump", false);
 
 
             
@@ -116,14 +135,24 @@ public class PlayerMovement : MonoBehaviour
            
             
         }
+
+        
             
         // in air
         else if(!grounded){
 
 
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            ////
+
+            animator.SetBool("Jump", true);
+            Debug.Log(animator.GetBool("Jump"));
             
         }
+
+        
+        
+
            
 
 
@@ -155,5 +184,6 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+        
     }
 }
