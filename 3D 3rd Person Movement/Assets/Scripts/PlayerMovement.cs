@@ -50,6 +50,23 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+
+    public void Teleport(Vector3 position, Quaternion rotation)
+    {
+
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
+
+        transform.position = position;
+        Physics.SyncTransforms();
+        horizontalInput = rotation.eulerAngles.y;
+        verticalInput = rotation.eulerAngles.z;
+        rb.velocity = Vector3.zero;
+
+
+    }
+
     private void Update()
     {
         
@@ -186,4 +203,12 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
         
     }
+
+
+
+
+
+
+
+
 }
