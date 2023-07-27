@@ -10,7 +10,7 @@ public class ItemPickUp : MonoBehaviour, IInteractable {
 
     public void Interact(Transform interactorTransform) {
      
-       Debug.Log("Item Pickup");
+        PickUp();
 
     
     }
@@ -18,7 +18,8 @@ public class ItemPickUp : MonoBehaviour, IInteractable {
 
 
     public void PickUp() {
-        Debug.Log("Pick up item");
+        //TODO - Add pick up object code here, also make separate drop function
+        Debug.Log("Pick up item!");
     }
 
 
