@@ -18,6 +18,15 @@ public class PlayerInteract : MonoBehaviour {
             }
 
 
+
+            //Pick up items
+       //     if (interactable = Item) {
+               // interactable.PickUp();
+        //   }
+
+
+
+
           
 
 
